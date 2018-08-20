@@ -16,7 +16,6 @@ public class WaitStatementLib
 		} 
 		catch (InterruptedException e)
 		{
-
 			e.printStackTrace();
 		}
 	}

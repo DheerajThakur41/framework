@@ -12,7 +12,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelUtilitiesLib
 {
-	public String readData(String filepath,String sheetname,int row, int col)
+	public static String readData(String filepath,String sheetname,int row, int col)
 	{
 		String value=null;
 		try 

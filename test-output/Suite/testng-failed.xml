@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <parameter name="Url" value="https://quadrant-info-pvt-ltd.odoo.com/web/login"/>
+  <parameter name="Browser" value="firefox"/>
+  <test name="Test(failed)">
+    <parameter name="Url" value="https://quadrant-info-pvt-ltd.odoo.com/web/login"/>
+    <parameter name="Browser" value="firefox"/>
+    <classes>
+      <class name="com.Kanbon.script.LoginTest">
+        <methods>
+          <include name="verifyValidLogin"/>
+          <include name="setUp"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.Kanbon.script.LoginTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

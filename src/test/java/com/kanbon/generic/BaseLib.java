@@ -15,13 +15,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class BaseLib 
 {   
 	public WebDriver driver;
-	@Parameters({"Browser","Url"})
 	@BeforeMethod
+	@Parameters({"Browser","Url"})
 	public void setUp(String browser,String url)
 	{   
 		if(browser.equalsIgnoreCase("firefox"))
 		{
-			 driver=new FirefoxDriver();
+			driver=new FirefoxDriver();
 		}
 		else if(browser.equalsIgnoreCase("chrome"))
 		{
@@ -43,11 +43,14 @@ public class BaseLib
 		String scriptname=result.getMethod().getMethodName();
 		if(result.isSuccess())
 		{
-			Reporter.log(scriptname, false);
+			Reporter.log(scriptname+": is Sucessfully Passed", true);
 		}
 		else
 		{
-//			ScreenShot sc=new ScreenShot(driver);
+			ScreenShot sc=new ScreenShot();
+			sc.takeScreenShot(driver, scriptname);
+
 		}
+		driver.close();
 	}
 }
